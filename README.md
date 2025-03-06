@@ -1,8 +1,8 @@
 ## Instrucciones para ejecutar la aplicación
 1. Ingresar al enlace adjunto que lleva al Github donde se encuentra el código, esté se debe descargar.
 2. Ingresar a IntelliJ, dar click en "Abrir" y buscar el repositorio.
-3. buscar el archivo "ResueltoApplication" dentro de src/main/java/com/parcial/resuelto
-4. Dar click derecho en el archivo y seleccionar ejecutar "ResueltoApplication.Main()"
+3. buscar el archivo "FinalApplication" dentro de src/main/java/com/programacion/proyectofinal
+4. Dar click derecho en el archivo y seleccionar ejecutar "FinalApplication.Main()"
 
 ## Evidencias
 
