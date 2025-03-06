@@ -53,8 +53,11 @@ public class ProductoService {
 
     // Actualizar un producto
     public Mono<Producto> updateProduct(String id, Producto newProducto) {
-        return getProductById(id, "en") // Se usa "en" para obtener el producto original sin traducción
+        return Mono.justOrEmpty(productos.stream()
+                        .filter(producto -> producto.getId().equals(id))
+                        .findFirst())
                 .flatMap(existingProducto -> {
+                    // Modify the existing product directly in the list
                     existingProducto.setNombre(newProducto.getNombre());
                     existingProducto.setPrecio(newProducto.getPrecio());
                     return Mono.just(existingProducto);

@@ -65,7 +65,7 @@ curl --location 'localhost:8080/api/productos' \
 --header 'Content-Type: application/json' \
 --data '{
 "id": "4",
-"nombre": "Audifonos",
+"nombre": "Audifonos Gaming",
 "precio": 560.99
 }'
 ```
@@ -73,14 +73,14 @@ curl --location 'localhost:8080/api/productos' \
 
 * Endpoint para modificar un producto:
 ```
-curl --location --request PUT 'localhost:8080/api/productos/1' \
+curl --location --request PUT 'localhost:8080/api/productos/4' \
 --header 'Content-Type: application/json' \
 --data '{
-"nombre": "Laptop Lenovo",
-"precio": 1850
+"nombre": "Headphones Gaming",
+"precio": 780.99
 }'
 ```
-![img_2.png](src/main/resources/Imagenes/img_11.png)
+![img.png](src/main/resources/Imagenes/img_2.png)
 
 * Endpoint para eliminar un producto:
 ```
