@@ -26,6 +26,16 @@ public class ProductoControllerTest {
     }
 
     @Test
+    public void testListaProductosIngles() {
+        Flux<Producto> productos = productoController.GetProducts("en");
+        StepVerifier.create(productos)
+                .expectNextMatches(p -> p.getNombre().equals("Laptop"))
+                .expectNextMatches(p -> p.getNombre().equals("Mouse"))
+                .expectNextMatches(p -> p.getNombre().equals("Keyboard"))
+                .verifyComplete();
+    }
+
+    @Test
     public void testCrearProducto() {
         Producto newProducto = new Producto("5", "test producto", 2890.0);
         Mono<Producto> producto = productoController.AddProduct(newProducto);
